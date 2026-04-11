@@ -1,0 +1,143 @@
+{
+  "turn": 4,
+  "players": {
+    "player": {
+      "id": "player",
+      "name": "You"
+    }
+  },
+  "worldNotes": [],
+  "log": [
+    {
+      "time": "2026-04-11T08:51:04.170Z",
+      "actorId": "player",
+      "eventId": "enter_gate_scene",
+      "summary": "enter gate scene"
+    },
+    {
+      "time": "2026-04-11T08:51:04.180Z",
+      "actorId": "player",
+      "eventId": "talk_guard",
+      "summary": "you greet the guard; he asks your business"
+    },
+    {
+      "time": "2026-04-11T08:51:04.192Z",
+      "actorId": "player",
+      "eventId": "talk_guard",
+      "summary": "you exchange a few words; his tone warms"
+    },
+    {
+      "time": "2026-04-11T08:51:04.200Z",
+      "actorId": "player",
+      "eventId": "request_entry",
+      "summary": "the guard grants entry"
+    },
+    {
+      "time": "2026-04-11T08:51:04.209Z",
+      "actorId": "player",
+      "eventId": "enter_inner_gate_scene",
+      "summary": "enter inner gate scene"
+    },
+    {
+      "time": "2026-04-11T08:51:04.219Z",
+      "actorId": "player",
+      "eventId": "head_in",
+      "summary": "you head into the city"
+    },
+    {
+      "time": "2026-04-11T08:51:04.229Z",
+      "actorId": "player",
+      "eventId": "seek_inn",
+      "summary": "you find a nearby inn"
+    },
+    {
+      "time": "2026-04-11T08:51:04.238Z",
+      "actorId": "player",
+      "eventId": "dynamic_move",
+      "summary": "dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"
+    },
+    {
+      "time": "2026-04-11T08:51:04.245Z",
+      "actorId": "player",
+      "eventId": "dynamic_move",
+      "summary": "dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"
+    },
+    {
+      "time": "2026-04-11T08:51:04.254Z",
+      "actorId": "player",
+      "eventId": "dynamic_move",
+      "summary": "dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"
+    }
+  ],
+  "meta": {
+    "createdAt": "2026-04-11T08:51:04.170Z",
+    "updatedAt": "2026-04-11T08:51:04.254Z"
+  },
+  "scene": "inner_gate_scene",
+  "sceneEntered": true,
+  "guardDisposition": "friendly",
+  "admitted": true,
+  "objectives": [
+    {
+      "id": "enter_city",
+      "status": "completed",
+      "step": "in_city"
+    },
+    {
+      "id": "find_inn",
+      "status": "completed",
+      "step": "found"
+    }
+  ],
+  "sceneSeed": {
+    "seedId": "seek_inn:1:6",
+    "fromEventId": "seek_inn",
+    "turn": 3,
+    "lastMoveId": "follow_rumor"
+  },
+  "sceneSkeleton": {
+    "sceneId": "seek_inn:1:6:follow_rumor",
+    "sourceSeedId": "seek_inn:1:6",
+    "locationType": "inn",
+    "tension": "high",
+    "npcRoles": [
+      "innkeeper",
+      "traveler"
+    ],
+    "availableMoves": [
+      "order_drink",
+      "ask_rumors",
+      "follow_rumor"
+    ],
+    "lastMoveId": "follow_rumor",
+    "shortDescription": "You follow the latest rumor into a darker lane: Rumors ripple through the room—some helpful, some dangerous."
+  },
+  "memory": {
+    "heardRumors": [
+      {
+        "id": "seek_inn:1:6:2:8",
+        "text": "Rumors ripple through the room—some helpful, some dangerous.",
+        "sourceType": "ask_rumors"
+      }
+    ],
+    "innVisited": false
+  },
+  "pendingChoices": [
+    {
+      "id": "order_drink",
+      "label": "order drink"
+    },
+    {
+      "id": "ask_rumors",
+      "label": "ask rumors"
+    },
+    {
+      "id": "follow_rumor",
+      "label": "follow rumor"
+    },
+    {
+      "id": "look_around",
+      "label": "look around"
+    }
+  ]
+}

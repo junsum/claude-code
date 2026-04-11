@@ -1,0 +1,169 @@
+{"time":"2026-04-11T07:24:31.143Z","actorId":"player","eventId":"continue","summary":"time passes"}
+{"time":"2026-04-11T07:24:48.015Z","actorId":"player","eventId":"observe","summary":"you look around"}
+{"time":"2026-04-11T07:25:00.649Z","actorId":"player","eventId":"talk","summary":"talk to npc"}
+{"time":"2026-04-11T07:25:10.212Z","actorId":"player","eventId":"continue","summary":"time passes"}
+{"time":"2026-04-11T07:30:11.631Z","actorId":"player","eventId":"wait","summary":"you wait by the gate as time passes"}
+{"time":"2026-04-11T07:30:55.310Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:31:06.122Z","actorId":"player","eventId":"observe_guard","summary":"you study the guard; armor scuffed, alert but bored"}
+{"time":"2026-04-11T07:31:18.334Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he nods and asks your business"}
+{"time":"2026-04-11T07:31:31.863Z","actorId":"player","eventId":"wait","summary":"you wait by the gate as time passes"}
+{"time":"2026-04-11T07:35:09.625Z","actorId":"player","eventId":"wait","summary":"you wait by the gate as time passes"}
+{"time":"2026-04-11T07:35:22.901Z","actorId":"player","eventId":"observe_guard","summary":"you study the guard; calm and watchful"}
+{"time":"2026-04-11T07:35:35.002Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:35:44.673Z","actorId":"player","eventId":"wait","summary":"you wait by the gate as time passes"}
+{"time":"2026-04-11T07:39:19.258Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:39:28.736Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T07:39:39.207Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:39:48.693Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T07:43:35.542Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:43:35.555Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T07:43:35.562Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:43:35.570Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T07:43:35.578Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T07:47:00.289Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:47:00.298Z","actorId":"player","eventId":"gate_fallback","summary":"unrecognized input nonsense"}
+{"time":"2026-04-11T07:47:00.305Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice unknown"}
+{"time":"2026-04-11T07:47:00.313Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T07:47:00.321Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:47:00.329Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T07:47:00.338Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T07:47:00.346Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice nope"}
+{"time":"2026-04-11T07:52:20.444Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:52:20.455Z","actorId":"player","eventId":"gate_fallback","summary":"unrecognized input nonsense"}
+{"time":"2026-04-11T07:52:20.464Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice unknown"}
+{"time":"2026-04-11T07:52:20.472Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T07:52:20.481Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:52:20.489Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T07:52:20.496Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T07:52:20.505Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice nope"}
+{"time":"2026-04-11T07:56:18.589Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:56:18.599Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T07:56:18.607Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:56:18.616Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T07:56:18.624Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T07:56:18.634Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T07:59:10.556Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T07:59:10.567Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T07:59:10.574Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T07:59:10.582Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T07:59:10.589Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T07:59:10.596Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T07:59:10.604Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice head_in"}
+{"time":"2026-04-11T07:59:10.612Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice unknown"}
+{"time":"2026-04-11T08:04:44.781Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:04:44.790Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:04:44.801Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:04:44.809Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:04:44.818Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:04:44.825Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:04:44.832Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:04:44.839Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice seek_inn"}
+{"time":"2026-04-11T08:08:24.166Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:08:24.175Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:08:24.183Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:08:24.191Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:08:24.198Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:08:24.206Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:08:24.214Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:11:47.418Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:11:47.429Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:11:47.437Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:11:47.447Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:11:47.454Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:11:47.462Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:11:47.470Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:14:57.313Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:14:57.322Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:14:57.332Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:14:57.341Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:14:57.349Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:14:57.358Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:14:57.367Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:21:46.308Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:21:46.316Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:21:46.324Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:21:46.331Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:21:46.339Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:21:46.346Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:21:46.355Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:21:46.363Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors"}
+{"time":"2026-04-11T08:26:56.445Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:26:56.456Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:26:56.463Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:26:56.472Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:26:56.479Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:26:56.488Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:26:56.495Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:26:56.504Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:26:56.511Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move order_drink -> seek_inn:1:6:order_drink"}
+{"time":"2026-04-11T08:31:05.842Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:31:05.851Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:31:05.859Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:31:05.868Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:31:05.875Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:31:05.883Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:31:05.892Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:31:05.902Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:33:10.374Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:33:10.383Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:33:10.390Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:33:10.399Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:33:10.406Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:33:10.415Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:33:10.424Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:33:10.431Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:36:18.876Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:36:18.884Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:36:18.892Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:36:18.901Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:36:18.908Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:36:18.916Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:36:18.924Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:36:18.933Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:36:18.942Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move order_drink -> seek_inn:1:6:order_drink"}
+{"time":"2026-04-11T08:39:28.030Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:39:28.040Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:39:28.047Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:39:28.056Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:39:28.064Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:39:28.072Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:39:28.083Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:39:28.090Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:39:28.098Z","actorId":"player","eventId":"invalid_choose","summary":"invalid choice follow_rumor"}
+{"time":"2026-04-11T08:40:09.358Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:40:09.369Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:40:09.377Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:40:09.384Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:40:09.392Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:40:09.402Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:40:09.410Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:40:09.418Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:40:09.427Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"}
+{"time":"2026-04-11T08:43:29.823Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:43:29.833Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:43:29.841Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:43:29.851Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:43:29.859Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:43:29.869Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:43:29.876Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:43:29.888Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:43:29.896Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"}
+{"time":"2026-04-11T08:47:37.702Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:47:37.710Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:47:37.719Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:47:37.726Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:47:37.734Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:47:37.742Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:47:37.750Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:47:37.758Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:47:37.767Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"}
+{"time":"2026-04-11T08:51:04.170Z","actorId":"player","eventId":"enter_gate_scene","summary":"enter gate scene"}
+{"time":"2026-04-11T08:51:04.180Z","actorId":"player","eventId":"talk_guard","summary":"you greet the guard; he asks your business"}
+{"time":"2026-04-11T08:51:04.192Z","actorId":"player","eventId":"talk_guard","summary":"you exchange a few words; his tone warms"}
+{"time":"2026-04-11T08:51:04.200Z","actorId":"player","eventId":"request_entry","summary":"the guard grants entry"}
+{"time":"2026-04-11T08:51:04.209Z","actorId":"player","eventId":"enter_inner_gate_scene","summary":"enter inner gate scene"}
+{"time":"2026-04-11T08:51:04.219Z","actorId":"player","eventId":"head_in","summary":"you head into the city"}
+{"time":"2026-04-11T08:51:04.229Z","actorId":"player","eventId":"seek_inn","summary":"you find a nearby inn"}
+{"time":"2026-04-11T08:51:04.238Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:51:04.245Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
+{"time":"2026-04-11T08:51:04.254Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"}

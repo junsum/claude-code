@@ -256,6 +256,19 @@ export const INTERNAL_ONLY_COMMANDS = [
 // Declared as a function so that we don't run this until getCommands is called,
 // since underlying functions read from config, which can't be read at module initialization time
 const COMMANDS = memoize((): Command[] => [
+  {
+    type: 'local',
+    supportsNonInteractive: true,
+    name: 'world',
+    description: 'Minimal world turn engine',
+    argumentHint: 'continue|observe|talk <target>|choose <id>',
+    load: async () => ({
+      call: async (args, _context) => {
+        const mod = await import('./world/engine.js')
+        return mod.call(args)
+      },
+    }),
+  },
   addDir,
   advisor,
   agents,

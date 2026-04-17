@@ -1,8 +1,19 @@
 import type { LocalCommandResult } from '../types/command.js'
-import type { Choice, TurnInput, TurnResult, WorldState } from './types.js'
+import type { Choice, EventRecord, TurnInput, TurnResult, WorldState } from './types.js'
+import { createStubDirector } from './director.js'
+import { validateDirectorResult } from './directorSchema.js'
 import { parseEvent, defaultChoicesForState } from './events.js'
 import { applyDelta } from './reducers.js'
 import { appendEvent, loadState, saveState } from './persistence.js'
+
+const director = createStubDirector()
+
+const makeRecord = (actorId: string, eventId: string, summary: string): EventRecord => ({
+  time: new Date().toISOString(),
+  actorId,
+  eventId,
+  summary,
+})
 
 const defaultState = (): WorldState => ({
   turn: 0,
@@ -24,6 +35,9 @@ const defaultState = (): WorldState => ({
     { id: 'wait', label: 'wait' },
   ],
 })
+
+const shouldUseDirector = (state: WorldState): boolean =>
+  state.scene === 'inner_gate_scene' && !!state.sceneSeed && !!state.sceneSkeleton
 
 const normalizeLoadedState = (loaded: WorldState): WorldState => {
   const anyLoaded = loaded as any
@@ -101,8 +115,41 @@ export const call = async (args: string): Promise<LocalCommandResult> => {
       ? normalizeLoadedState(loaded as WorldState)
       : defaultState()
   const actorId = 'player'
-  const text = toTurnText(args, prior.scene)
-  const input: TurnInput = { actorId, text }
+  const rawText = args.trim()
+  const canonicalText = toTurnText(args, prior.scene)
+
+  if (shouldUseDirector(prior)) {
+    const decided = await director.decide({
+      actorId,
+      rawText,
+      canonicalText,
+      state: prior,
+    })
+    const validated = validateDirectorResult(prior, decided)
+    const delta = {
+      ...validated.delta,
+      logAppend: [makeRecord(actorId, 'director_turn', validated.logSummary)],
+    }
+    const after = applyDelta(prior, delta)
+    const result: TurnResult = {
+      stateAfter: after,
+      message: validated.message,
+      choices: validated.choices,
+      eventId: 'director_turn',
+      meta: {
+        moveId: after.sceneSkeleton?.lastMoveId,
+        seedId: after.sceneSeed?.seedId,
+        sceneId: after.sceneSkeleton?.sceneId,
+      },
+    }
+    if (delta.logAppend && delta.logAppend.length > 0) {
+      for (const rec of delta.logAppend) await appendEvent(rec)
+    }
+    await saveState(after)
+    return { type: 'text', value: formatOutput(result) }
+  }
+
+  const input: TurnInput = { actorId, text: canonicalText }
   const def = parseEvent(input, prior)
   const delta = def.toDelta(input, prior)
   const after = applyDelta(prior, delta)

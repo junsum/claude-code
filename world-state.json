@@ -1,5 +1,5 @@
 {
-  "turn": 4,
+  "turn": 7,
   "players": {
     "player": {
       "id": "player",
@@ -67,11 +67,29 @@
       "actorId": "player",
       "eventId": "dynamic_move",
       "summary": "dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"
+    },
+    {
+      "time": "2026-04-17T08:57:49.621Z",
+      "actorId": "player",
+      "eventId": "director_turn",
+      "summary": "director provider exception"
+    },
+    {
+      "time": "2026-04-17T08:58:35.348Z",
+      "actorId": "player",
+      "eventId": "director_turn",
+      "summary": "director provider exception"
+    },
+    {
+      "time": "2026-04-17T09:01:25.178Z",
+      "actorId": "player",
+      "eventId": "director_turn",
+      "summary": "director provider exception"
     }
   ],
   "meta": {
     "createdAt": "2026-04-11T08:51:04.170Z",
-    "updatedAt": "2026-04-11T08:51:04.254Z"
+    "updatedAt": "2026-04-17T09:01:25.178Z"
   },
   "scene": "inner_gate_scene",
   "sceneEntered": true,
@@ -122,22 +140,5 @@
     ],
     "innVisited": false
   },
-  "pendingChoices": [
-    {
-      "id": "order_drink",
-      "label": "order drink"
-    },
-    {
-      "id": "ask_rumors",
-      "label": "ask rumors"
-    },
-    {
-      "id": "follow_rumor",
-      "label": "follow rumor"
-    },
-    {
-      "id": "look_around",
-      "label": "look around"
-    }
-  ]
+  "pendingChoices": []
 }

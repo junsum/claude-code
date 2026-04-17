@@ -1,12 +1,13 @@
 import type {
   Choice,
+  DynamicMoveId,
   EffectDelta,
   EventDefinition,
   EventRecord,
-  RumorMemoryItem,
   WorldState,
 } from '../types.js'
 import { isObjectiveStatus, upsertObjective, updateObjective } from '../objectives.js'
+import { governRumors } from '../memory.js'
 import {
   innerEnterMessage,
   innerHeadInMessage,
@@ -28,31 +29,53 @@ const makeRecord = (actorId: string, eventId: string, summary: string): EventRec
   summary,
 })
 
-const MAX_RUMORS = 20
+const parseChosenMoveId = (text: string, state: WorldState): DynamicMoveId | null => {
+  const m = text.trim().match(/^choose\s+(\S+)/)
+  const choiceId = m ? m[1] : null
+  if (!choiceId || !state.sceneSkeleton) return null
+  return state.sceneSkeleton.availableMoves.find(moveId => moveId === choiceId) ?? null
+}
 
-const normalizeRumorText = (text: string): string => text.trim().replace(/\s+/g, ' ')
+const computeUpdatedMemory = (
+  state: WorldState,
+  choiceId: DynamicMoveId,
+  firstDescription: string,
+): WorldState['memory'] => {
+  const rumorId = `${state.sceneSeed?.seedId ?? 'seed'}:${state.turn}:${state.log.length}`
+  const heardRumors =
+    choiceId === 'ask_rumors'
+      ? governRumors([
+          ...state.memory.heardRumors,
+          {
+            id: rumorId,
+            text: firstDescription,
+            sourceType: 'ask_rumors',
+          },
+        ])
+      : state.memory.heardRumors
+  const innVisited = choiceId === 'order_drink' ? true : state.memory.innVisited
+  return { ...state.memory, heardRumors, innVisited }
+}
 
-const governRumors = (items: RumorMemoryItem[]): RumorMemoryItem[] => {
-  const seen = new Set<string>()
-  const out: RumorMemoryItem[] = []
-  for (let i = items.length - 1; i >= 0; i--) {
-    const key = normalizeRumorText(items[i].text)
-    if (seen.has(key)) continue
-    seen.add(key)
-    out.push(items[i])
-  }
-  return out.reverse().slice(-MAX_RUMORS)
+const advanceDynamicState = (
+  state: WorldState,
+  choiceId: DynamicMoveId,
+  memory: WorldState['memory'],
+  first: ReturnType<typeof advanceSceneSkeleton>,
+) => {
+  if (choiceId !== 'ask_rumors') return first
+  return advanceSceneSkeleton({ ...state, memory }, state.sceneSeed!, choiceId)
 }
 
 export const innerChoicesAll = [
-  { id: 'look_around', label: 'look around' },
-  { id: 'head_in', label: 'head into city' },
+  { id: 'look_around', label: '环顾四周' },
+  { id: 'head_in', label: '进入城内' },
 ] as const satisfies readonly Choice[]
 
-const completedChoices: Choice[] = [{ id: 'look_around', label: 'look around' }]
+const completedChoices: Choice[] = [{ id: 'look_around', label: '环顾四周' }]
 const postCompletionChoices: Choice[] = [
-  { id: 'seek_inn', label: 'seek inn' },
-  { id: 'look_around', label: 'look around' },
+  { id: 'seek_inn', label: '寻找客栈' },
+  { id: 'look_around', label: '环顾四周' },
 ]
 
 export const innerChoicesForState = (state: WorldState): Choice[] =>
@@ -155,38 +178,26 @@ export const dynamicMove: EventDefinition = {
   matches: (input, state) => {
     if (state.scene !== 'inner_gate_scene') return false
     if (!state.sceneSkeleton || !state.sceneSeed) return false
-    const m = input.text.trim().match(/^choose\s+(\S+)/)
-    const choiceId = m ? m[1] : null
-    if (!choiceId) return false
-    return (state.sceneSkeleton.availableMoves as readonly string[]).includes(choiceId)
+    return parseChosenMoveId(input.text, state) !== null
   },
   toDelta: (input, state): EffectDelta => {
-    const m = input.text.trim().match(/^choose\s+(\S+)/)
-    const choiceId = (m ? m[1] : '') as any
+    const choiceId = parseChosenMoveId(input.text, state)
+    if (!choiceId) {
+      return {
+        pendingChoices: state.sceneSkeleton
+          ? [...sceneChoicesFromSkeleton(state.sceneSkeleton), ...completedChoices]
+          : completedChoices,
+      }
+    }
     const first = advanceSceneSkeleton(state, state.sceneSeed!, choiceId)
-    const rumorId = `${state.sceneSeed?.seedId ?? 'seed'}:${state.turn}:${state.log.length}`
-    const heardRumors =
-      choiceId === 'ask_rumors'
-        ? governRumors([
-            ...state.memory.heardRumors,
-            {
-              id: rumorId,
-              text: first.skeleton.shortDescription,
-              sourceType: 'ask_rumors',
-            },
-          ])
-        : state.memory.heardRumors
-    const innVisited = choiceId === 'order_drink' ? true : state.memory.innVisited
-    const advanced =
-      choiceId === 'ask_rumors'
-        ? advanceSceneSkeleton({ ...state, memory: { ...state.memory, heardRumors } }, state.sceneSeed!, choiceId)
-        : first
+    const memory = computeUpdatedMemory(state, choiceId, first.skeleton.shortDescription)
+    const advanced = advanceDynamicState(state, choiceId, memory, first)
     return {
       turnInc: 1,
       statePatch: {
         sceneSeed: advanced.seed,
         sceneSkeleton: advanced.skeleton,
-        memory: { ...state.memory, heardRumors, innVisited },
+        memory,
       },
       logAppend: [
         makeRecord(
@@ -202,6 +213,7 @@ export const dynamicMove: EventDefinition = {
     stateAfter.sceneSkeleton
       ? dynamicMoveMessage(
           {
+            generatedSceneKind: stateAfter.sceneSkeleton.generatedSceneKind,
             locationType: stateAfter.sceneSkeleton.locationType,
             tension: stateAfter.sceneSkeleton.tension,
             npcRoles: stateAfter.sceneSkeleton.npcRoles,

@@ -1,0 +1,6 @@
+{
+  "apiKey": "sk-ywmqvtlssyxkqxmendeiwokfbjmirivjgkqrvxqhddsbxzwl",
+  "model": "Pro/zai-org/GLM-5.1",
+  "baseURL": "https://api.siliconflow.cn/v1",
+  "timeoutMs": 15000
+}

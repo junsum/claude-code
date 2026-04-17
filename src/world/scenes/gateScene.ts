@@ -23,12 +23,12 @@ const makeRecord = (actorId: string, eventId: string, summary: string): EventRec
 })
 
 const gateChoicesAll = [
-  { id: 'observe_guard', label: 'observe guard' },
-  { id: 'talk_guard', label: 'talk guard' },
-  { id: 'wait', label: 'wait' },
+  { id: 'observe_guard', label: '观察守卫' },
+  { id: 'talk_guard', label: '与守卫交谈' },
+  { id: 'wait', label: '等待' },
 ] as const
 
-const requestEntryChoice: Choice = { id: 'request_entry', label: 'request entry' }
+const requestEntryChoice: Choice = { id: 'request_entry', label: '请求入城' }
 
 const gateChoicesByDisposition = (
   disp: WorldState['guardDisposition'],

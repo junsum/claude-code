@@ -12,6 +12,43 @@ export const parseChooseId = (text: string): string | null => {
   return m ? m[1] : null
 }
 
+const formatChoicesHint = (state: WorldState, choicesForState: (state: WorldState) => Choice[]): string => {
+  const choices = choicesForState(state)
+  if (choices.length === 0) return ''
+  return choices.map(choice => `/world choose ${choice.id}`).join('、')
+}
+
+const innerFallbackPrefix = (state: WorldState): string => {
+  const kind = state.sceneSkeleton?.generatedSceneKind
+  if (kind === 'rumor_trail') return '你正处在循线追踪阶段'
+  if (kind === 'rumor_listening') return '你正处在探听线索阶段'
+  if (kind === 'inn_rest') return '你正处在客栈歇脚阶段'
+  if (kind === 'street_roam') return '你正处在街巷游移阶段'
+  return '你正处在当前场景阶段'
+}
+
+const describeInvalidChoose = (
+  chooseId: string,
+  stateAfter: WorldState,
+  choicesForState: (state: WorldState) => Choice[],
+): string => {
+  if (stateAfter.scene !== 'inner_gate_scene') return `无效选项：${chooseId}`
+  const hint = formatChoicesHint(stateAfter, choicesForState)
+  return hint
+    ? `${innerFallbackPrefix(stateAfter)}，不能执行“${chooseId}”。可尝试：${hint}。`
+    : `${innerFallbackPrefix(stateAfter)}，不能执行“${chooseId}”。`
+}
+
+const describeInnerFallback = (
+  stateAfter: WorldState,
+  choicesForState: (state: WorldState) => Choice[],
+): string => {
+  const hint = formatChoicesHint(stateAfter, choicesForState)
+  return hint
+    ? `${innerFallbackPrefix(stateAfter)}，这条输入没有对应动作。可尝试：${hint}。`
+    : `${innerFallbackPrefix(stateAfter)}，这条输入没有对应动作。`
+}
+
 export const makeInvalidChooseEvent = (
   chooseId: string,
   choicesForState: (state: WorldState) => Choice[],
@@ -24,7 +61,7 @@ export const makeInvalidChooseEvent = (
     ],
     pendingChoices: choicesForState(state),
   }),
-  describe: () => `Invalid choice: ${chooseId}`,
+  describe: (stateAfter) => describeInvalidChoose(chooseId, stateAfter, choicesForState),
   choices: (stateAfter) => choicesForState(stateAfter),
 })
 
@@ -41,7 +78,7 @@ export const makeGateFallbackEvent = (
     pendingChoices: choicesForState(state),
   }),
   describe: () =>
-    'Unrecognized input at the gate. Try /world choose observe_guard, /world choose talk_guard, or /world choose wait.',
+    '城门前无法识别这条输入。可尝试：/world choose observe_guard、/world choose talk_guard、/world choose wait。',
   choices: (stateAfter) => choicesForState(stateAfter),
 })
 
@@ -57,8 +94,6 @@ export const makeInnerFallbackEvent = (
     ],
     pendingChoices: choicesForState(state),
   }),
-  describe: () =>
-    'Unrecognized input in this scene. Try /world choose look_around or /world choose head_in.',
+  describe: (stateAfter) => describeInnerFallback(stateAfter, choicesForState),
   choices: (stateAfter) => choicesForState(stateAfter),
 })
-

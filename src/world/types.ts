@@ -33,6 +33,13 @@ export type ObjectiveState = EnterCityObjective | FindInnObjective
 
 export type DynamicMoveId = 'order_drink' | 'ask_rumors' | 'keep_walking' | 'follow_rumor'
 
+export type GeneratedSceneKind =
+  | 'threshold_pause'
+  | 'street_roam'
+  | 'inn_rest'
+  | 'rumor_listening'
+  | 'rumor_trail'
+
 export type WorldMemory = {
   heardRumors: RumorMemoryItem[]
   innVisited: boolean
@@ -73,6 +80,7 @@ export type SceneSeed = {
 export type SceneSkeleton = {
   sceneId: string
   sourceSeedId: string
+  generatedSceneKind?: GeneratedSceneKind
   locationType: 'street' | 'inn' | 'market'
   tension: 'low' | 'medium' | 'high'
   npcRoles: Array<'innkeeper' | 'traveler' | 'guard' | 'merchant'>

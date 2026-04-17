@@ -167,3 +167,6 @@
 {"time":"2026-04-11T08:51:04.238Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
 {"time":"2026-04-11T08:51:04.245Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move ask_rumors -> seek_inn:1:6:ask_rumors"}
 {"time":"2026-04-11T08:51:04.254Z","actorId":"player","eventId":"dynamic_move","summary":"dynamic move follow_rumor -> seek_inn:1:6:follow_rumor"}
+{"time":"2026-04-17T08:57:49.621Z","actorId":"player","eventId":"director_turn","summary":"director provider exception"}
+{"time":"2026-04-17T08:58:35.348Z","actorId":"player","eventId":"director_turn","summary":"director provider exception"}
+{"time":"2026-04-17T09:01:25.178Z","actorId":"player","eventId":"director_turn","summary":"director provider exception"}
